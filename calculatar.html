@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *
+        {
+            user-select: none;
+        }
+        .main{
+            width:450px;
+            height:550px;
+            background: #99ff01;
+            box-shadow: 20PX 20PX 20PX #7c8075;
+           
+            
+        }
+        .dis
+        {
+            
+           
+        }
+        #inp
+        {
+            width: 94%;
+            margin-right: 10px;
+            margin-left: 10px;
+            height: 50px;
+            margin-top: 10PX;
+        }
+        .btn
+        {
+            width: 94%;
+            height: 450px;
+            background-color: rgba(0, 0, 0, 0.788);
+            margin-top: 15PX;
+            margin-right: 10px;
+            margin-left: 10px;
+            float: left;
+            
+        }
+        .btn:hover
+        {
+            box-shadow: 2px 1px 20px #99ff01;
+        }
+        input
+        {
+            font-size: 35px;
+            box-shadow: 0px 0px 30px#99ff01;
+           
+        }
+        .btnca
+        {
+            border: 4px solid #99ff01;
+            width: 90px;
+            height: 70px;
+            border-radius: 100%;
+            margin-left: 10px;
+            margin-bottom: 20px;
+            margin-top: 20px;
+            font-size: 35px;
+
+        }
+        .btnca:hover
+        {
+           box-shadow: 0px 0px 40px #99ff01;
+           text-shadow: 0px 0px 30px #99ff01;
+           background: #99ff01;
+           border: 2px solid black;
+        }
+    </style>
+   
+</head>
+<body bgcolor="">
+    <div class="main">
+        <div class="dis">
+            <input type="text" id="inp">
+        </div>
+        <div class="btn">
+            <button class="btnca" onclick="clk(1)">1</button>
+            <button class="btnca" onclick="clk(2)">2</button>
+            <button class="btnca" onclick="clk(3)">3</button>
+            <button class="btnca" onclick="clr()">C</button>
+            <button class="btnca" onclick="clk(4)">4</button>
+            <button class="btnca" onclick="clk(5)">5</button>
+            <button class="btnca" onclick="clk(6)">6</button>
+            <button class="btnca" onclick="clk('+')">+</button>
+            <button class="btnca" onclick="clk(7)">7</button>
+            <button class="btnca" onclick="clk(8)">8</button>
+            <button class="btnca" onclick="clk(9)">9</button>
+            <button class="btnca" onclick="clk('-')">-</button>
+            <button class="btnca" onclick="clk(0)">0</button>
+            <button class="btnca" onclick="res()">=</button>
+            <button class="btnca" onclick="clk('*')">*</button>
+            <button class="btnca" onclick="clk('/')">/</button>
+        </div>
+    </div>
+    <script>
+        function clk(k)
+        {
+            document.getElementById('inp').value = document.getElementById('inp').value+k;
+        }
+        function clr()
+        {
+            document.getElementById('inp').value="";
+        }
+        function res()
+        {
+            var data=document.getElementById('inp').value;
+            var r=eval(data);
+            document.getElementById('inp').value=r;
+        }
+    </script>
+</body>
+</html>
